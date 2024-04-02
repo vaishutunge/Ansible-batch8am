@@ -14,8 +14,7 @@
                    state: present 
            when: ansible_os_family == "RedHat"
 
-         - name: service httpd start, if not started
+         - name: Start service httpd, if not started
            service:
                    name: httpd
-                   state: restarted
-                   enabled: yes
+                   state: started
