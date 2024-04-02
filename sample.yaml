@@ -12,4 +12,10 @@
            yum:
                   name: httpd
                   state: present 
-           when: ansible_os_family == "RedHat" 
+           when: ansible_os_family == "RedHat"
+
+         - name: start service  httpd, if not stared
+           service:
+                  name: httpd
+                  state: restarted
+                  enabled: yes
