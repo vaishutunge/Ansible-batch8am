@@ -6,4 +6,11 @@
            apt:
                    name: apache2
                    state: present
-           when: ansible_os_family == "Debian"      
+           when: ansible_os_family == "Debian"    
+
+         - name: i want to instal apache2 in redhat ansible node
+           yum:
+                  name: httpd
+                  state: present 
+           when: ansible_os_family == "Redhat"    
+   
