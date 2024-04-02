@@ -10,12 +10,12 @@
 
          - name: i want to instal apache2 in redhat ansible node
            yum:
-                  name: httpd
+                   name: httpd
                   state: present 
            when: ansible_os_family == "RedHat"
 
-         - name: start service  httpd, if not stared
+         - name: start service httpd, if not stared
            service:
-                  name: httpd
-                  state: restarted
-                  enabled: yes
+                   name: httpd
+                   state: restarted
+                   enabled: yes
