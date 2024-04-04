@@ -15,6 +15,4 @@
            when: ansible_os_family == "RedHat"
 
          - name: Start service httpd, if not started
-           ansible.legacy.systemd:
-                   name: httpd
-                   state: started
+           

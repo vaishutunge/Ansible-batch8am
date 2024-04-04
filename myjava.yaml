@@ -1,8 +1,17 @@
 ---
-- hosts: all
+- hosts: webserver
   become: yes
   tasks:
          - name: i want to install java openjdk-8-jre-headless  on ubuntn server
            apt:
-                   name: openjdk-8-jregi
-                   state: present
+                name: openjdk-8-jregi
+                state: present
+           when: ansible_os_family == ""Debian""
+
+         - name: i want to install java jdk 8 on redHat machine
+           yum:
+                name:java-1.8.0-openjdk
+                state: present
+           when: ansible_os_family == "RedHat"
+        
+                 
