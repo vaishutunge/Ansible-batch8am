@@ -2,6 +2,14 @@
 172.31.13.127
 172.31.7.144
 
+
 [DBserver]
-172.31.13.127
-172.31.7.144
+172.31.13.186
+172.31.7.187
+
+
+[webserver:vars]
+javaopenjdk8onubuntu= openjdk-8-jre
+javaopenjdk8onRedHat= java-1.8.0-openjdk
+apache2onubuntu= apache2
+httpdonredhat= httpd
