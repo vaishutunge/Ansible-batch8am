@@ -4,7 +4,7 @@
   tasks:
          - name: i want to install java openjdk-8-jre-headless  on ubuntn server
            apt:
-                 name: openjdk-8-jregi
+                 name: openjdk-8-jre
                  state: present
            when: ansible_os_family == "Debian" 
 
