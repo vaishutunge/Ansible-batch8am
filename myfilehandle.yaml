@@ -4,7 +4,7 @@
    tasks:
        - include_tasks: myfile.yaml
 
-        - name: i want to install apache2
+    - name: i want to install apache2
         apt:
             name: apache2
             state: present
