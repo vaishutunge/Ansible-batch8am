@@ -1,5 +1,5 @@
 ---
-- hosts: 172.172.31.13.127
+- hosts: 172.31.13.127
   become: yes
   tasks:
     - name: i want to run linux command on node
