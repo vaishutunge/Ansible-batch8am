@@ -1,10 +1,11 @@
 ---
- - hosts: 172.31.13.127
-   become: yes 
-   tasks:
+- hosts: 172.31.13.127
+  become: yes
+  tasks: 
        - include_tasks: myfile.yml
 
-       - name: i want Install Apache2
+       - name: i want to install apache2
          apt:
             name: apache2
             state: present
+
