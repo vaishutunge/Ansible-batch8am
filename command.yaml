@@ -11,14 +11,14 @@
          msg: "{{myresult}}"
 
 - name: i want to install git
-      apt: 
+  apt: 
          name: git
          state: present
       when: myresult.stderr!= ""
 
 
 - name: i want to install apache2
-      apt:
+  apt:
          name: apache2
          state: present
       when: myresult.stderr== ""
