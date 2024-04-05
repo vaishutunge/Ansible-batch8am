@@ -1,5 +1,5 @@
 ---
-- hosts: 172.31.13.127
+- hosts: 172.31.31.7
   become: yes
   tasks:
     - name: i want to run linux command on node
@@ -10,15 +10,15 @@
       debug:
          msg: "{{myresult}}"
 
-- name: i want to install git
-  apt: 
+    - name: i want to install git
+      apt: 
          name: git
          state: present
       when: myresult.stderr!= ""
 
 
-- name: i want to install apache2
-  apt:
+    - name: i want to install apache2
+      apt: 
          name: apache2
          state: present
       when: myresult.stderr== ""
