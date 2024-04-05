@@ -1,0 +1,11 @@
+----
+- hosts: 172.31.13.127
+  become: yes
+  vars:
+   myvar1 : tree
+   myvar2 : git
+   myvar3 : apache2
+  tasks:
+      - name: i want to display variable value
+        debug:
+            msg : "{{myvar1}}"
