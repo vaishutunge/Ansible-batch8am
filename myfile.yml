@@ -4,7 +4,7 @@
   tasks:
      - name: i want to create a file1
        file:
-         path: /home/ubuntu/myansiblefile1
+         path: /home/ubuntu/myansiblefile2
          state: touch
 
     
