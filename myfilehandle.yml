@@ -8,3 +8,8 @@
         apt:
           name: apache2
           state: present
+
+- name: i want to replace apache2 template with my jinja template
+        template:
+            src: index.j2
+            dest: /var/www/html/index.html
