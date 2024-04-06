@@ -1,10 +1,7 @@
 ---
-- hosts: 172.31.13.127
-  become: yes
-  tasks:
-     - name: i want to create a file1
-       file:
-         path: /home/ubuntu/myansiblefile2
-         state: touch
+- name: i want to create a file1
+  file:
+       path: /home/ubuntu/myansiblefile2
+       state: touch
 
     
