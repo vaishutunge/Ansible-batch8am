@@ -4,13 +4,13 @@
   tasks:
          - name: i want to install java openjdk-8-jre-headless  on ubuntn server
            apt:
-                 name: openjdk-8-jre
+                 name: "{{javaopenjdk8onubuntus}}"
                  state: present
            when: ansible_os_family == "Debian" 
 
          - name: i want to install java jdk 8 on redHat machine
            yum:
-                 name: java-1.8.0-openjdk
+                 name: "{{javaopenjdk8onRedHat}}"
                  state: present
            when: ansible_os_family == "RedHat"
         
