@@ -3,12 +3,10 @@
          - name: i want to install apache2 in node133333
            apt:
                    name: "apache2"
-                   state: absent
+                   state: present
            when: ansible_os_family == "Debian"    
 
-         - name: i want to instal apache2 in redhat ansible node
-           yum:
-                   name: "httpd"
-                   state: present 
-           when: ansible_os_family == "RedHat"
-
+         - name: Change Apache2 template with Jinja template
+           template:
+              src: index.j2
+              dest: /var/www/html/index.html   
