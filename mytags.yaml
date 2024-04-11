@@ -14,7 +14,6 @@
              state: present  
         tags: myapache2task
 
-
       - name: i want to install git
         apt:
               name: git
