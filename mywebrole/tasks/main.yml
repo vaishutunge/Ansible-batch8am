@@ -2,7 +2,7 @@
 # tasks file for mywebrole
          - name: i want to install apache2 in node133333
            apt:
-                   name: "apacddhe2"
+                   name: "apache2"
                    state: present
            when: ansible_os_family == "Debian"    
 
