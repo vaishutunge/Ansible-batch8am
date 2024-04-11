@@ -13,6 +13,4 @@
                    name: "{{httpdonredhat}}"
                    state: present 
            when: ansible_os_family == "RedHat"
-
-         - name: Start service httpd, if not started
            
